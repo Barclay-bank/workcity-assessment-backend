@@ -1,0 +1,104 @@
+POST http://localhost:5000/api/auth/signup
+Content-Type: application/json
+
+{
+  "name": "Godstime",
+  "email": "godstime@example.com",
+  "password": "123456",
+  "role": "user"
+}
+
+###
+GET http://localhost:5000/api/auth/me
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4OTIwNzQzZmVmMGU1ZjA3NjFhMjAwYiIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc1NDQwMzMxNywiZXhwIjoxNzU0NDg5NzE3fQ.SzuaHdOO5yRXWnZGfBXcfkXrfmHPRdsfku1rl0Cdgmk
+
+
+###
+POST http://localhost:5000/api/auth/login
+Content-Type: application/json
+
+{
+  "email": "john@example.com",
+  "password": "123456"
+}
+
+###
+POST http://localhost:5000/api/clients
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4OTIwNzQzZmVmMGU1ZjA3NjFhMjAwYiIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc1NDQwMzMxNywiZXhwIjoxNzU0NDg5NzE3fQ.SzuaHdOO5yRXWnZGfBXcfkXrfmHPRdsfku1rl0Cdgmk
+
+{
+  "name": "John Doe",
+  "email": "john@example.com",
+  "phone": "07017936241"
+}
+
+### 
+GET http://localhost:5000/api/clients
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4OTIwNzQzZmVmMGU1ZjA3NjFhMjAwYiIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc1NDQwMzMxNywiZXhwIjoxNzU0NDg5NzE3fQ.SzuaHdOO5yRXWnZGfBXcfkXrfmHPRdsfku1rl0Cdgmk
+
+###
+PUT http://localhost:5000/api/clients/6892af042943025aff1430a4
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4OTIwNzQzZmVmMGU1ZjA3NjFhMjAwYiIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc1NDQwMzMxNywiZXhwIjoxNzU0NDg5NzE3fQ.SzuaHdOO5yRXWnZGfBXcfkXrfmHPRdsfku1rl0Cdgmk
+
+{
+  "name": "kess"
+}
+
+###
+DELETE http://localhost:5000/api/clients/68928f1a2943025aff142e6e
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4OTIwNzQzZmVmMGU1ZjA3NjFhMjAwYiIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc1NDQwMzMxNywiZXhwIjoxNzU0NDg5NzE3fQ.SzuaHdOO5yRXWnZGfBXcfkXrfmHPRdsfku1rl0Cdgmk
+
+###
+POST http://localhost:5000/api/projects
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4OTIwNzQzZmVmMGU1ZjA3NjFhMjAwYiIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc1NDQwMzMxNywiZXhwIjoxNzU0NDg5NzE3fQ.SzuaHdOO5yRXWnZGfBXcfkXrfmHPRdsfku1rl0Cdgmk
+
+{
+  "title": "John Doe",
+  "description": "john@example.com",
+  "status": "pending",
+  "client": "6892af042943025aff1430a4"
+}
+
+###
+GET http://localhost:5000/api/projects
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4OTIwNzQzZmVmMGU1ZjA3NjFhMjAwYiIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc1NDQwMzMxNywiZXhwIjoxNzU0NDg5NzE3fQ.SzuaHdOO5yRXWnZGfBXcfkXrfmHPRdsfku1rl0Cdgmk
+
+
+###
+DELETE http://localhost:5000/api/projects/68927b782943025aff142dda
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4OTIwNzQzZmVmMGU1ZjA3NjFhMjAwYiIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc1NDQwMzMxNywiZXhwIjoxNzU0NDg5NzE3fQ.SzuaHdOO5yRXWnZGfBXcfkXrfmHPRdsfku1rl0Cdgmk
+
+### Create a new project
+POST http://localhost:5000/api/projects
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4OTIwNzQzZmVmMGU1ZjA3NjFhMjAwYiIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc1NDQwMzMxNywiZXhwIjoxNzU0NDg5NzE3fQ.SzuaHdOO5yRXWnZGfBXcfkXrfmHPRdsfku1rl0Cdgmk
+
+{
+  "title": "Marketing Website",
+  "description": "Redesign corporate website for Acme Corp.",
+  "client": "689212315b90655400d1870c"
+}
+
+###
+GET http://localhost:5000/api/projects/6892b9422943025aff143120
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4OTIwNzQzZmVmMGU1ZjA3NjFhMjAwYiIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc1NDQwMzMxNywiZXhwIjoxNzU0NDg5NzE3fQ.SzuaHdOO5yRXWnZGfBXcfkXrfmHPRdsfku1rl0Cdgmk
+
+### 
+PUT http://localhost:5000/api/projects/689213885b90655400d18714
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4OTIwNzQzZmVmMGU1ZjA3NjFhMjAwYiIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc1NDQwMzMxNywiZXhwIjoxNzU0NDg5NzE3fQ.SzuaHdOO5yRXWnZGfBXcfkXrfmHPRdsfku1rl0Cdgmk
+
+{
+  "status": "Completed"
+  
+}
+
+
+
