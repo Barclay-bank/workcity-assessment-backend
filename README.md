@@ -25,8 +25,8 @@ Backend API for ProjectFlow, a project management application with client and pr
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/projectflow-backend.git
-   cd projectflow-backend
+   git clone https://github.com/Barclay-bank/workcity-assessment-backend.git
+   cd workcity-assessment-backend
    ```
 
 2. Install dependencies:
@@ -62,7 +62,7 @@ npm start
 ### Authentication
 | Endpoint       | Method | Description           |
 |----------------|--------|-----------------------|
-| `/auth/register` | POST   | Register new user     |
+| `/auth/signup` | POST   | Register new user     |
 | `/auth/login`    | POST   | Login user            |
 | `/auth/me`       | GET    | Get current user info |
 
@@ -148,6 +148,6 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 ## Contact
 
-Your Name - your.email@example.com
+Your Name - godstimeamerica99@gmail.com
 
-Project Link: [https://github.com/yourusername/projectflow-backend](https://github.com/yourusername/projectflow-backend)
+Project Link: [https://github.com/Barclay-bank/workcity-assessment-backend.git](https://github.com/Barclay-bank/workcity-assessment-backend.git)
