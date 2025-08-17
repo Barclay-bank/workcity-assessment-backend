@@ -1,18 +1,33 @@
-POST http://localhost:5000/api/auth/signup
+POST http://localhost:5001/api/auth/signup
 Content-Type: application/json
 
 {
   "name": "Godstime",
-  "email": "godstime@example.com",
-  "password": "123456",
-  "role": "user"
+  "email": "audu@example.com",
+  "phone": "08068183281",
+  "password": "12345678",
+  "level": "300L",
+  "mat_no": "U2021/5520027",
+  "role": "student",
+  "department": "Computer Science"
+  
 }
+###
+GET http://localhost:5001/api/auth/users
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4OWUzOTFjYjI0NWNkMGEwMGZiODNjYiIsInJvbGUiOiJsZWN0dXJlciIsImVtYWlsIjoia2tAZXhhbXBsZS5jb20iLCJ0b2tlbklkIjoiOGU2MzQwNTc2MjUwNTkzZjE5NzkzNWExMjZhNWJhZWQiLCJpc3MiOiJ5b3VyLWFwcC1uYW1lIiwiYXVkIjoieW91ci1hcHAtY2xpZW50IiwiaWF0IjoxNzU1MTk5NzczLCJleHAiOjE3NTUyODYxNzN9.IFAnZyZVDRvd4rnln1UAKtkcCJ1B8vTCm27vpbn_DCM
 
 ###
-GET http://localhost:5000/api/auth/me
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4OTIwNzQzZmVmMGU1ZjA3NjFhMjAwYiIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc1NDQwMzMxNywiZXhwIjoxNzU0NDg5NzE3fQ.SzuaHdOO5yRXWnZGfBXcfkXrfmHPRdsfku1rl0Cdgmk
+GET http://localhost:5001/api/auth/users/6898191ebd0e90963e356c4f
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4OTgxYTliYmQwZTkwOTYzZTM1NmM1MyIsInJvbGUiOiJsZWN0dXJlciIsImVtYWlsIjoiZ2dAZXhhbXBsZS5jb20iLCJ0b2tlbklkIjoiYWNhYTdjZGQwM2VjMjlkZTFlZWEyZGY5NGQxZmI3YzciLCJpc3MiOiJ5b3VyLWFwcC1uYW1lIiwiYXVkIjoieW91ci1hcHAtY2xpZW50IiwiaWF0IjoxNzU0Nzk4NzQ3LCJleHAiOjE3NTQ4ODUxNDd9.2UEFKfEaBlbkyS7Rvt_BhJJyHNEdxCAK3h09NBDIw30
+
+###
+GET http://localhost:5001/api/auth/me
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4OTgxYTliYmQwZTkwOTYzZTM1NmM1MyIsInJvbGUiOiJsZWN0dXJlciIsImVtYWlsIjoiZ2dAZXhhbXBsZS5jb20iLCJ0b2tlbklkIjoiYWNhYTdjZGQwM2VjMjlkZTFlZWEyZGY5NGQxZmI3YzciLCJpc3MiOiJ5b3VyLWFwcC1uYW1lIiwiYXVkIjoieW91ci1hcHAtY2xpZW50IiwiaWF0IjoxNzU0Nzk4NzQ3LCJleHAiOjE3NTQ4ODUxNDd9.2UEFKfEaBlbkyS7Rvt_BhJJyHNEdxCAK3h09NBDIw30
 
 
+###
+DELETE http://localhost:5001/api/auth/6898191ebd0e90963e356c4f
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4OWUzOTFjYjI0NWNkMGEwMGZiODNjYiIsInJvbGUiOiJsZWN0dXJlciIsImVtYWlsIjoia2tAZXhhbXBsZS5jb20iLCJ0b2tlbklkIjoiOGU2MzQwNTc2MjUwNTkzZjE5NzkzNWExMjZhNWJhZWQiLCJpc3MiOiJ5b3VyLWFwcC1uYW1lIiwiYXVkIjoieW91ci1hcHAtY2xpZW50IiwiaWF0IjoxNzU1MTk5NzczLCJleHAiOjE3NTUyODYxNzN9.IFAnZyZVDRvd4rnln1UAKtkcCJ1B8vTCm27vpbn_DCM
 ###
 POST http://localhost:5000/api/auth/login
 Content-Type: application/json
